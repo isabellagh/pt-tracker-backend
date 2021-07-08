@@ -5,9 +5,9 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users
 
-      resources :clients do
-        resources :workouts
-      end
+      resources :clients 
+      resources :workouts
+    
     end
   end
   
