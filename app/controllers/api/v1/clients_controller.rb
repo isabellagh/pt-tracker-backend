@@ -1,15 +1,14 @@
 class Api::V1::ClientsController < ApplicationController
 
     def index 
-        # if logged_in?
-        #   @clients = current_user.clients
-        @clients = Client.all
-          render json: @clients, status: :ok
-        # else
-        #   render json: {
-        #     error: "Not logged in", status: :unauthorized
-        #   }
-        # end 
+        if logged_in?
+          @clients = current_user.clients
+          render json: ClientSerializer.new(@clients)
+        else
+          render json: {
+            error: "Not logged in", status: :unauthorized
+          }
+        end 
       end
     
       def create 
