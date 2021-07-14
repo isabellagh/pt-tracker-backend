@@ -14,7 +14,9 @@ class Api::V1::ClientsController < ApplicationController
       def create 
         @client = Client.new(client_params)
         if @client.save
-          render json: @client, status: :created, location: @client
+          render json: ClientSerializer.new(@client), status: :created
+
+          # render json: @client, status: :created, location: @client
         else
           render json: @client.errors, status: :unprocessable_entity
         end
