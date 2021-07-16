@@ -12,7 +12,10 @@ class Api::V1::ClientsController < ApplicationController
       end
     
       def create 
-        @client = Client.new(client_params)
+        @client = current_user.clients.new(client_params)
+        
+        # binding.pry
+        
         if @client.save
           render json: ClientSerializer.new(@client), status: :created
 
