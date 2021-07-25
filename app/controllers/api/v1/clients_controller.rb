@@ -26,13 +26,14 @@ class Api::V1::ClientsController < ApplicationController
       end
     
       def show
-        render json: @client
         # @client = Client.find_by_id(params[:id])
+        render json: @client
       end
     
       def destroy
-        # @client = Client.find_by_id(params[:id])
+        @client = Client.find_by_id(params[:id])
         @client.destroy
+        render json: @client.id
       end
         
       private
