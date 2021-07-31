@@ -21,36 +21,3 @@ Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 This application was created by Isabella Henriques for the Flatiron Bootcamp Phase 5 project. Having the requirements of using React, Redux, and a Ruby on Rails API backend.
 
 ### Thank you for checking this out.
-
-
-
-
-
-
-
-
-
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
